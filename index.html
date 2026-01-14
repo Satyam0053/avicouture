@@ -20,30 +20,31 @@
             flex-direction: column;
         }
 
-        /* Header Styling */
+        
+/* Header Styling */
         header {
             background-color: #050164;
-            padding: 20px 20px;
+            padding: 20px 5%; /* Adds 5% safety space on sides */
             text-align: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             width: 100%;
-            flex-shrink:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         header h1 {
-            margin: 0 auto;
+            margin: 0;
             color: #ffffff;
-            /* 7.2vw ensures it fits even on very narrow 320px screens 
-               Max size 2.5rem keeps it elegant on Desktop
+            /* 6.8vw ensures the text is always 6.8% of screen width.
+               This prevents it from ever being wider than the blue box.
             */
-            font-size: clamp(1rem, 7.2vw, 2.5rem); 
+            font-size: clamp(1rem, 6.8vw, 2.5rem); 
             text-transform: uppercase;
             letter-spacing: 1px;
-            white-space: nowrap; /* Forces one line */
-            display: block;
-            width: fit-content;
+            white-space: nowrap; /* Keeps it in one line like desktop */
+            text-align: center;
         }
-
         /* Main Content Styling */
         .content {
             flex-grow: 1;
@@ -84,4 +85,3 @@
 
 </body>
 </html>
-
