@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avi Couture | Official</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c9fdff;
+            overflow: hidden; /* Prevents scroll bars during floating */
+        }
+        /* Header Styling */
+        header {
+            background-color: #050164;
+            padding: 10px 0; /* Fixed the typo here */
+            margin: auto;
+            text-align: center;
+            box-shadow: 1 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+        header h1 {
+            margin: 0;
+            color: #ffffff;
+            background-color: #050164(255, 255, 255);
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        /* Main Content Styling */
+        .content {
+            display: flex; /* Added flex to center the floating text */
+            justify-content: center;
+            align-items: center;
+            height: 70vh; 
+            text-align: center;
+        }
+        .content p {
+            color: #000000;
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: bold;
+            /* Applying the float animation */
+            animation: floatAnimation 5s ease-in-out infinite;
+        }
+
+        /* The Floating Animation Logic */
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-40px); /* Moves up 40 pixels */
+            }
+            100% {
+                transform: translateY(0px); /* Returns to original position */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome To Avi Couture</h1>
+    </header>
+
+    <div class="content">
+        <p>😊 Site Would be Live Soon ✨</p>
+    </div>
+
+</body>
+</html>
