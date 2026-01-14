@@ -2,61 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Avi Couture | Official</title>
     <style>
+        * {
+            box-sizing: border-box; /* Critical for keeping elements inside the screen */
+        }
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #c9fdff;
-            overflow: hidden; 
+            overflow-x: hidden; /* Stops horizontal scrolling on mobile */
             width: 100%;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
+        /* Header Styling */
         header {
             background-color: #050164;
-            padding: 15px 0;
+            padding: 20px 10px;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             width: 100%;
-            box-sizing: border-box; 
+            flex-shrink: 0;
         }
 
         header h1 {
-            margin: 0;
+            margin: 0 auto;
             color: #ffffff;
-            /* AUTOMATIC SCALING: Min 1rem, Preferred 6.5% width, Max 2.8rem */
-            font-size: clamp(1rem, 6.5vw, 2.8rem); 
+            /* 7.2vw ensures it fits even on very narrow 320px screens 
+               Max size 2.5rem keeps it elegant on Desktop
+            */
+            font-size: clamp(1rem, 7.2vw, 2.5rem); 
             text-transform: uppercase;
             letter-spacing: 1px;
-            white-space: nowrap; /* PREVENTS WRAPPING */
-            padding: 0 10px;
+            white-space: nowrap; /* Forces one line */
+            display: block;
+            width: fit-content;
         }
 
+        /* Main Content Styling */
         .content {
+            flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 100px); 
-            width: 100%;
             text-align: center;
+            width: 100%;
         }
 
         .content p {
             color: #000000;
-            font-size: clamp(1rem, 5vw, 2rem);
+            /* Scales the 'Live Soon' text to fit any screen */
+            font-size: clamp(0.9rem, 6vw, 2rem);
             font-style: italic;
             font-weight: bold;
             white-space: nowrap; 
-            padding: 0 20px;
+            padding: 0 15px;
+            margin: 0;
             animation: floatAnimation 5s ease-in-out infinite;
         }
 
         @keyframes floatAnimation {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-25px); }
+            50% { transform: translateY(-20px); }
         }
     </style>
 </head>
